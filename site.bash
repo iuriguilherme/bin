@@ -1,4 +1,7 @@
 #!/bin/bash
+## Este script é o equivalente a utilizar o a2ensite
+## É necessárioter um diretório local com os arquivos de configuração do Nginx
+
 LOCAL_CONF="${HOME}/nginx.d/"
 NGINX_CONF="/etc/nginx/"
 DIR=`pwd`
