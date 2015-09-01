@@ -10,3 +10,7 @@ pushd "${NGINX_CONF}/sites-enabled"
 sudo rm "${1}"
 popd
 
+pushd "${NGINX_CONF}/sites-available"
+sudo rm "${1}"
+popd
+
