@@ -7,7 +7,7 @@ do
 	if [ -d "${REPO}" ]
 	then
 	        pushd "${REPO}"
-		rsync -avhP . www:git/
+		rsync -avhP . www:git/`basename ${REPO}`
 		popd
 	fi
 done
