@@ -1,0 +1,14 @@
+#!/bin/bash
+## Este script serve para atualizar todos os sites da iiKB
+## Isto é necessário porque o servidor web não tem acesso a git externo
+
+for REPO in ${HOME}/git/*
+do
+	if [ -d "${REPO}" ]
+	then
+	        pushd "${REPO}"
+		rsync -avhP . www:git/
+		popd
+	fi
+done
+
