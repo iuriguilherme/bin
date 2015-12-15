@@ -1,7 +1,7 @@
 #!/bin/bash
 ## Kopimi 2015 - this file has no license to begin with
 ## Source code should be at:
-## https://notabug.org/desci/scripts/telegram-stickers.bash
+## https://notabug.org/desci/scripts/src/master/telegram-stickers.bash
 ##
 ## This script converts the given image to a png format accepted by telegram's
 ## stickers bot (https://telegram.me/stickers).
