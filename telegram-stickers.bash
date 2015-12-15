@@ -1,8 +1,15 @@
 #!/bin/bash
 ## Kopimi 2015 - this file has no license to begin with
+## Source code should be at:
+## https://notabug.org/desci/scripts/telegram-stickers.bash
+##
 ## This script converts the given image to a png format accepted by telegram's
 ## stickers bot (https://telegram.me/stickers).
 ## You need ImageMagick for this to work.
+##
+## To convert all images in a directory, you could try something like this:
+## for IMAGE in *.gif *.jpg; do bash telegram-stickers.bash ${IMAGE}; done
+##
 
 if [ ! -z $1 ]
 then
