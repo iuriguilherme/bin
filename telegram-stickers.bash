@@ -16,15 +16,15 @@ then
 		## We need to know whether we have to reduce the width or the height.
 		if [ ${WIDTH} -gt ${HEIGHT} ]
 		then
-			convert -size 512 "${IMAGE}" "${NEW_IMAGE}"
+			convert -resize 512 "${IMAGE}" "${NEW_IMAGE}"
 			echo "${IMAGE} converted to 512 width, automagically adjusted height. Saved to ${NEW_IMAGE}"
 		elif [ ${WIDTH} -lt ${HEIGHT} ]
 		then
-			convert -size x512 "${IMAGE}" "${NEW_IMAGE}"
+			convert -resize x512 "${IMAGE}" "${NEW_IMAGE}"
 			echo "${IMAGE} converted to 512 height, automagically adjusted width. Saved to ${NEW_IMAGE}"
 		elif [ ${WIDTH} -eq ${HEIGHT} ]
 		then
-			convert -size 512x512 "${IMAGE}" "${NEW_IMAGE}"
+			convert -resize 512x512 "${IMAGE}" "${NEW_IMAGE}"
 			echo "${IMAGE} converted to 512 width and 512 height. Saved to ${NEW_IMAGE}"
 		else
 			echo "I'm not sure what to do with ${IMAGE}."
