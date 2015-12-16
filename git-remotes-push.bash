@@ -1,6 +1,5 @@
 #!/bin/bash
-## Este script serve para adicionar vários remotes em um repositório GIT.
-## Não importa qual é o 'origin' ou 'upstream', este script cria remotes novos.
+## Este script serve para dar push a todos remotes configurados em um repositório GIT.
 
 pushd `pwd`
 
