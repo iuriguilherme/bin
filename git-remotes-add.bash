@@ -2,11 +2,12 @@
 ## Este script serve para adicionar vários remotes em um repositório GIT.
 ## Não importa qual é o 'origin' ou 'upstream', este script cria remotes novos.
 
+pushd `pwd`
+
 ORIGIN="`git remote -v | grep -m 1 -e 'origin' | awk '{ print $2 }'`"
 REMOTE_NAMES=( 'notabug' 'gitlab' 'github' )
 REMOTE_URLS=( 'notabug.org' 'gitlab.com' 'github.com' )
 
-pushd `pwd`
 if [ ${#REMOTE_NAMES[*]} -eq ${#REMOTE_URLS[*]} ]
 then
 	for REMOTE_NUM in `seq 0 \`expr ${#REMOTE_NAMES[*]} - 1\``
@@ -19,5 +20,6 @@ then
 else
 	echo "Número de parâmetros incorretos, corrija o script"
 fi
+
 popd
 
