@@ -1,8 +1,9 @@
 #!/bin/bash
 ## Inicia o serviço da biblioteca
 
-MG_P="/etc/init.d/mg-paster"
-MG_CW="/etc/init.d/mg-celery-worker"
+MG_P="mediagoblin-paster"
+MG_CW="mediagoblin-celeryd"
 
-sudo ${MG_P} start
-sudo ${MG_CW} start
+sudo systemctl -l start ${MG_P}
+sudo systemctl -l start ${MG_CW}
+
