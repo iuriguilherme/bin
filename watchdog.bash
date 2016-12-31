@@ -3,7 +3,7 @@
 ## Monitora serviços para garantir que estão online
 ## Exemplo de uso em https://iikb.org/forum/Zeronet/
 ## Adicionar uma linha semelhante na crontab para rodar de 5 em 5 minutos:
-## */5 /home/user/bin/watchdog.bash
+## */5 * * * * /home/user/bin/watchdog.bash
 ##
 ## Domínio Público igreja insurgente Kopimista Brasileira 2016
 ##
