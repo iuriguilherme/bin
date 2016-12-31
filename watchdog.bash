@@ -17,6 +17,11 @@ SERVICOS_ICECAST=( \
 "ices2-theerm" \
 )
 
+SERVICOS_MEDIAGOBLIN=( \
+"mediagoblin-paster" \
+"mediagoblin-celeryd" \
+)
+
 SERVICOS_WEB=( \
 "nginx" \
 "zeronet" \
@@ -25,6 +30,7 @@ SERVICOS_WEB=( \
 ## Comentar serviços que não estejam no servidor é opcional para diminuir o spam de erros nos logs do sistema
 SERVICOS=( \
 "${SERVICOS_ICECAST[@]}" \
+"${SERVICOS_MEDIAGOBLIN[@]}" \
 "${SERVICOS_WEB[@]}" \
 )
 
