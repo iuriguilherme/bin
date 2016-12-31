@@ -24,6 +24,7 @@ SERVICOS_MEDIAGOBLIN=( \
 
 SERVICOS_WEB=( \
 "nginx" \
+"apoio" \
 "zeronet" \
 )
 
