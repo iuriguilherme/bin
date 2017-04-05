@@ -26,6 +26,7 @@ SERVICOS_WEB=( \
 "nginx" \
 "apoio" \
 "zeronet" \
+"ipfs" \
 )
 
 ## Comentar serviços que não estejam no servidor é opcional para diminuir o spam de erros nos logs do sistema
