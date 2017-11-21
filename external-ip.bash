@@ -7,7 +7,7 @@ echo '<!DOCTYPE HTML>' 1> ${INDEX_FILE}
 echo '<html>' 1>> ${INDEX_FILE}
 echo '<body>' 1>> ${INDEX_FILE}
 echo -n '<p>' 1>> ${INDEX_FILE}
-echo -n "${PUBLIC_HTML}" 1>> ${INDEX_FILE}
+echo -n "${PUBLIC_IP}" 1>> ${INDEX_FILE}
 echo '</p>' 1>> ${INDEX_FILE}
 echo '</body>' 1>> ${INDEX_FILE}
 echo '</html>' 1>> ${INDEX_FILE}
