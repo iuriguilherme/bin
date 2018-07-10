@@ -19,3 +19,6 @@ echo 'syntax on' 1>> ~/.vimrc
 echo 'set number' 1>> ~/.vimrc
 echo 'set tabstop=8 softtabstop=0 expandtab shiftwidth=2 smarttab' 1>> ~/.vimrc
 
+## X11
+echo 'setxkbmap -layout "us,br" -option "grp:lwin_toggle"' 1>> ~/.xinitrc
+
