@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 ## Cria uma senha pseudo aleatória boa pra criptografia
 
@@ -8,9 +8,8 @@ import binascii, os, sys
 tamanho = 8
 
 ## Caso um número seja fornecido, use-o como tamanho
-if len(sys.argv) > 1:
-	if str(sys.argv[1]).isdigit():
-		tamanho = int(sys.argv[1])
+if len(sys.argv) > 1 and str(sys.argv[1]).isdigit():
+  tamanho = int(sys.argv[1])
 
-print str(binascii.hexlify(os.urandom(tamanho)))
+print(binascii.hexlify(os.urandom(tamanho)).decode('utf-8'))
 
