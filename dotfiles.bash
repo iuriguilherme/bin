@@ -5,6 +5,7 @@ ARQUIVO_BASHRC="${HOME}/.bashrc"
 ARQUIVO_BASH_ALIASES="${HOME}/.bash_aliases"
 ARQUIVO_VIMRC="${HOME}/.vimrc"
 ARQUIVO_XINITRC="${HOME}/.xinitrc"
+ARQUIVO_PROFILE="${HOME}/.profile"
 
 ## Adiciona aliases e functions do bash
 ## Não é bom se acostumar com comandos não padrões, porque num computador novo ou no computador das outras pessoas não vai ter essas coisas. Decore os comandos padrão!
@@ -26,4 +27,20 @@ echo 'set tabstop=4 softtabstop=0 expandtab shiftwidth=2 smarttab' 1>> ${ARQUIVO
 
 ## X11
 echo 'setxkbmap -layout "us,br" -option "grp:lwin_toggle"' 1>> ${ARQUIVO_XINITRC}
+
+## bin local
+echo 'NEW_PATHS=( \' 1>> ${ARQUIVO_PROFILE}
+echo '"${HOME}/bin" \' 1>> ${ARQUIVO_PROFILE}
+echo '"${HOME}/.local/bin" \' 1>> ${ARQUIVO_PROFILE}
+echo ')' 1>> ${ARQUIVO_PROFILE}
+echo 'for NEW_PATH in ${NEW_PATHS[@]}' 1>> ${ARQUIVO_PROFILE}
+echo 'do' 1>> ${ARQUIVO_PROFILE}
+echo '  if [ -d "${NEW_PATH}" ]' 1>> ${ARQUIVO_PROFILE}
+echo '  then' 1>> ${ARQUIVO_PROFILE}
+echo '    PATH="${NEW_PATH}:$PATH"' 1>> ${ARQUIVO_PROFILE}
+echo '  fi' 1>> ${ARQUIVO_PROFILE}
+echo 'done' 1>> ${ARQUIVO_PROFILE}
+
+## cpanminus local
+echo 'eval $(perl -I ~/perl5/lib/perl5 -Mlocal::lib)' 1>> ${ARQUIVO_PROFILE}
 
