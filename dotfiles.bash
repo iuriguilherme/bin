@@ -6,6 +6,7 @@ ARQUIVO_BASH_ALIASES="${HOME}/.bash_aliases"
 ARQUIVO_VIMRC="${HOME}/.vimrc"
 ARQUIVO_XINITRC="${HOME}/.xinitrc"
 ARQUIVO_PROFILE="${HOME}/.profile"
+ARQUIVO_PROFILE_KALI="${HOME}/.profile"
 
 ## Adiciona aliases e functions do bash
 ## Não é bom se acostumar com comandos não padrões, porque num computador novo ou no computador das outras pessoas não vai ter essas coisas. Decore os comandos padrão!
@@ -43,4 +44,14 @@ echo 'done' 1>> ${ARQUIVO_PROFILE}
 
 ## cpanminus local
 echo 'eval $(perl -I ~/perl5/lib/perl5 -Mlocal::lib)' 1>> ${ARQUIVO_PROFILE}
+
+echo '# ~/.profile: executed by Bourne-compatible login shells.' 1> ${ARQUIVO_PROFILE_KALI}
+echo 1>> ${ARQUIVO_PROFILE_KALI}
+echo 'if [ "$BASH" ]; then' 1>> ${ARQUIVO_PROFILE_KALI}
+echo ' if [ -f ~/.bashrc ]; then' 1>> ${ARQUIVO_PROFILE_KALI}
+echo '    . ~/.bashrc' 1>> ${ARQUIVO_PROFILE_KALI}
+echo '  fi' 1>> ${ARQUIVO_PROFILE_KALI}
+echo 'fi' 1>> ${ARQUIVO_PROFILE_KALI}
+echo 1>> ${ARQUIVO_PROFILE_KALI}
+echo 'mesg n || true' 1>> ${ARQUIVO_PROFILE_KALI}
 
