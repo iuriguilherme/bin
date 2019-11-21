@@ -8,6 +8,15 @@ ARQUIVO_XINITRC="${HOME}/.xinitrc"
 ARQUIVO_PROFILE="${HOME}/.profile"
 ARQUIVO_PROFILE_KALI="${HOME}/.profile"
 
+## Comentar e descomentar cada um
+ARQUIVO_NENHUM="${HOME}/nenhum"
+#ARQUIVO_BASHRC=${ARQUIVO_NENHUM}
+#ARQUIVO_BASH_ALIASES=${ARQUIVO_NENHUM}
+#ARQUIVO_VIMRC=${ARQUIVO_NENHUM}
+#ARQUIVO_XINITRC=${ARQUIVO_NENHUM}
+#ARQUIVO_PROFILE=${ARQUIVO_NENHUM}
+#ARQUIVO_PROFILE_KALI=${ARQUIVO_NENHUM}
+
 ## Adiciona aliases e functions do bash
 ## Não é bom se acostumar com comandos não padrões, porque num computador novo ou no computador das outras pessoas não vai ter essas coisas. Decore os comandos padrão!
 echo "if [ -f ${ARQUIVO_BASH_ALIASES} ]" 1>> ${ARQUIVO_BASHRC}
@@ -52,6 +61,18 @@ echo ' if [ -f ~/.bashrc ]; then' 1>> ${ARQUIVO_PROFILE_KALI}
 echo '    . ~/.bashrc' 1>> ${ARQUIVO_PROFILE_KALI}
 echo '  fi' 1>> ${ARQUIVO_PROFILE_KALI}
 echo 'fi' 1>> ${ARQUIVO_PROFILE_KALI}
+echo 1>> ${ARQUIVO_PROFILE_KALI}
+echo 'NEW_PATHS=( \' 1>> ${ARQUIVO_PROFILE_KALI}
+echo '"${HOME}/bin" \' 1>> ${ARQUIVO_PROFILE_KALI}
+echo '"${HOME}/.local/bin" \' 1>> ${ARQUIVO_PROFILE_KALI}
+echo ')' 1>> ${ARQUIVO_PROFILE_KALI}
+echo 'for NEW_PATH in ${NEW_PATHS[@]}' 1>> ${ARQUIVO_PROFILE_KALI}
+echo 'do' 1>> ${ARQUIVO_PROFILE_KALI}
+echo '  if [ -d "${NEW_PATH}" ]' 1>> ${ARQUIVO_PROFILE_KALI}
+echo '  then' 1>> ${ARQUIVO_PROFILE_KALI}
+echo '    PATH="${NEW_PATH}:$PATH"' 1>> ${ARQUIVO_PROFILE_KALI}
+echo '  fi' 1>> ${ARQUIVO_PROFILE_KALI}
+echo 'done' 1>> ${ARQUIVO_PROFILE_KALI}
 echo 1>> ${ARQUIVO_PROFILE_KALI}
 echo 'mesg n || true' 1>> ${ARQUIVO_PROFILE_KALI}
 
