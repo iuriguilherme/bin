@@ -10,12 +10,12 @@ ARQUIVO_PROFILE_KALI="${HOME}/.profile"
 
 ## Comentar e descomentar cada um
 ARQUIVO_NENHUM="${HOME}/nenhum"
-#ARQUIVO_BASHRC=${ARQUIVO_NENHUM}
-#ARQUIVO_BASH_ALIASES=${ARQUIVO_NENHUM}
-#ARQUIVO_VIMRC=${ARQUIVO_NENHUM}
-#ARQUIVO_XINITRC=${ARQUIVO_NENHUM}
-#ARQUIVO_PROFILE=${ARQUIVO_NENHUM}
-#ARQUIVO_PROFILE_KALI=${ARQUIVO_NENHUM}
+ARQUIVO_BASHRC=${ARQUIVO_NENHUM}
+ARQUIVO_BASH_ALIASES=${ARQUIVO_NENHUM}
+ARQUIVO_VIMRC=${ARQUIVO_NENHUM}
+ARQUIVO_XINITRC=${ARQUIVO_NENHUM}
+ARQUIVO_PROFILE=${ARQUIVO_NENHUM}
+ARQUIVO_PROFILE_KALI=${ARQUIVO_NENHUM}
 
 ## Adiciona aliases e functions do bash
 ## Não é bom se acostumar com comandos não padrões, porque num computador novo ou no computador das outras pessoas não vai ter essas coisas. Decore os comandos padrão!
