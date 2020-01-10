@@ -1,0 +1,5 @@
+#!/bin/bash
+## Outputs external ipv4 in the shell
+
+echo $(dig +short myip.opendns.com @resolver1.opendns.com)
+
