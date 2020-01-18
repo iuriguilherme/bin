@@ -11,5 +11,8 @@ tamanho = 8
 if len(sys.argv) > 1 and str(sys.argv[1]).isdigit():
   tamanho = int(sys.argv[1])
 
-print(binascii.hexlify(os.urandom(tamanho)).decode('utf-8'))
+senha = os.urandom(tamanho)
 
+print(u"HEX:\n%s\n" % binascii.hexlify(senha).decode('utf-8'))
+print(u"B64:\n%s" % binascii.b2a_base64(senha).decode('utf-8'))
+print(u"HQX:\n%s\n" % binascii.b2a_hqx(binascii.rlecode_hqx(senha)).decode('utf-8'))
