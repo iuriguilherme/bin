@@ -5,9 +5,10 @@ SWAP_FILE="/srv/swap/swapfile.swap"
 USER=`whoami`
 SIZE=1048576
 
-if [ ! -z $1]
+if [ ! -z $1 ]
 then
   let SIZE=SIZE*$1
+  echo "Will create a file with ${SIZE} *bytes*"
 else
   echo "Defaulting to 1GB (${SIZE} kilobytes). Use $0 8 for 8GB."
 fi
