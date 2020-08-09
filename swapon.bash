@@ -2,7 +2,7 @@
 ## Ativa swap no servidor
 
 SWAP_FILE_NAME="swapfile.swap"
-SWAP_FILE_PATH="/srv/swap/"
+SWAP_FILE_PATH="/srv/swap"
 USER=`whoami`
 SIZE=1048576
 
