@@ -14,6 +14,11 @@ else
   echo "Defaulting to 1GB (${SIZE} kibibytes). Use $0 8 for 8GB (1 gibibyte times 8 in powers of 1024)."
 fi
 
+if [ -d $2 ]
+then
+  SWAP_FILE_PATH="${2}"
+fi
+
 SWAP_FILE="${SWAP_FILE_PATH}/${SWAP_FILE_NAME}"
 
 echo "Will use ${SWAP_FILE} as swap file."
