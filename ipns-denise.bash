@@ -4,6 +4,6 @@
 
 if [ $(hostname -f) == "denise.matehackers.org" ]
 then
-  ipfs name publish $(ipfs add --cid-version 1 -r -Q /var/www/denise)
+  /usr/local/bin/ipfs name publish $(ipfs add --cid-version 1 -r -Q /var/www/denise)
 fi
 
